@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>프로젝트 소스코드 - 박승우</title>
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- 외부 자바스크립트 파일 연결 -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- 상단 내비게이션 바 -->
+    <header id="main-header">
+        <h1 class="neon-text">SW.PARK</h1>
+        <nav>
+            <ul>
+                <li><a href="#intro">Intro</a></li>
+                <li><a href="#tech">Tech Stack</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section 1: Intro -->
+    <section id="intro">
+        <article>
+            <h2 class="neon-text">안녕하세요, 박승우입니다.</h2>
+            <p>동국대학교 멀티미디어공학과 21학번에 재학 중이며, <br>
+            게임하는 것을 좋아하여 게임 기획 및 개발 관련 진로를 꿈꾸고있습니다.</p>
+        </article>
+    </section>
+
+    <!-- Section 2: Tech Stack -->
+    <section id="tech">
+        <h2 class="neon-text">Tech Stack</h2>
+        <div class="tech-container">
+            <span class="tech-badge">Unity (C#)</span>
+            <span class="tech-badge">C / C++</span>
+            <span class="tech-badge">Python (Deep Learning)</span>
+            <span class="tech-badge">HTML5 / CSS3 / JS</span>
+        </div>
+    </section>
+
+    <!-- Section 3: Projects -->
+    <section id="projects">
+        <h2 class="neon-text">Featured Projects</h2>
+        <div class="card-container">
+            <article class="project-card" onclick="openModal('동국대 방탈출 게임', 'media/Projects/DGU_Escape.PNG', '동국대학교의 상징적인 장소인 중앙도서관, 신공학관 교실, 팔정도를 배경으로 제작한 1인칭 3D 방탈출 어드벤처 게임입니다. 수업 시간에 학습한 유니티(Unity) 물리 엔진과 트리거(Trigger) 이벤트, 그리고 GUI 시스템을 적극적으로 활용하여 다양한 퍼즐과 방탈출 로직을 구현했습니다. 특히 누름식 자물쇠의 물리적 고증을 맞추기 위해 중복 입력을 방지하는 세밀한 퍼즐 로직을 설계하였으며, 직접 게임을 기획하고 테스트하는 과정에서 시청각적 피드백과 디테일한 연출을 다수 추가하여 몰입도를 극대화했습니다. 3D 에셋 배치와 공간 디자인을 통해 실제 캠퍼스를 탐험하는 듯한 현실감을 제공하며, 초기 기획 의도보다 높은 완성도의 게임성을 달성한 의미 있는 프로젝트입니다.', '최종 보고서 다운로드', 'Files/DGU_Escape_Report.pdf', '빌드 파일 다운로드', 'Files/DGU_Escape_Build.zip')">
+                <h3>동국대 방탈출 게임</h3>
+                <img src="media/Projects/DGU_Escape.PNG" alt="동국대 방탈출 게임">
+                <p>Unity 기반 동국대 배경 1인칭 3D 방탈출 어드벤처</p>
+            </article>
+
+            <article class="project-card" onclick="openModal('Project : Sky Savior', 'media/Projects/SkySavior.PNG', 'Unity 2020.3 버전을 활용하여 직접 기획하고 개발한 3D 슈팅 게임입니다. 게임 내 전반적인 그래픽 품질을 향상시키기 위해 RayTracing 기법을 도입하여 빛의 반사와 그림자를 사실적으로 렌더링했습니다. 또한, 단순한 패턴의 적 움직임을 탈피하고자 적 AI에 MCTS(Monte Carlo Tree Search) 알고리즘을 적용하여 플레이어의 실력에 따라 게임 난이도가 동적으로 조절되도록 설계했습니다. 플레이어 기체의 조작감부터 적의 생성 및 파괴 이펙트까지 세밀하게 폴리싱(Polishing) 과정을 거쳤으며, 그래픽 성능 최적화와 인공지능 알고리즘의 결합을 통해 기술적 깊이와 게임의 재미를 동시에 잡아냈습니다.', '최종 보고서 다운로드', 'Files/Skysavior_Report.pdf', '빌드 파일 다운로드', 'Files/Skysavior_Build.zip')">
+                <h3>Project : Sky Savior</h3>
+                <img src="media/Projects/SkySavior.PNG" alt="Sky Savior">
+                <p>Unity 기반의 3D 로그라이트 비행 아케이드 슈팅 게임</p>
+            </article>
+
+            <article class="project-card" onclick="openModal('Text Classification AI', 'media/Projects/RNN.PNG', '자연어 처리(NLP) 기술의 핵심인 텍스트 분류를 주제로, 대규모 텍스트 데이터셋인 AG News를 활용하여 여러 딥러닝 모델의 성능을 비교 분석한 프로젝트입니다. 어텐션(Attention) 메커니즘을 결합한 RNN 모델을 직접 구현하여 문맥의 중요도를 파악하도록 설계했으며, CNN 및 최신 트랜스포머 기반의 DistilBERT 모델 등을 적용하여 성능을 확인했습니다. 모델들의 학습 속도, 파라미터 수, 그리고 최종 분류 정확도를 다각도로 비교 분석하는 과정을 거쳤으며, 이를 통해 딥러닝 모델의 구조적 차이가 결과에 미치는 영향을 탐구하고 실무적인 AI 모델링 역량을 길렀습니다.', 'RNN IPYNB 파일 다운로드', 'Files/RNN.ipynb', 'CNN IPYNB 파일 다운로드', 'Files/CNN.ipynb')">
+                <h3>Text Classification AI</h3>
+                <img src="media/Projects/RNN.PNG" alt="RNN">
+                <p>RNN(Attention) 및 DistilBERT를 활용한 AG News 텍스트 분류 모델</p>
+            </article>
+            
+            <article class="project-card" onclick="openModal('DNA Reconstruction Algorithm', 'media/Projects/DNA.PNG', '생물정보학(Bioinformatics) 분야에서 필수적으로 사용되는 De Bruijn 그래프(Graph) 알고리즘을 적용하여 파편화된 DNA 서열을 완벽하게 복원하는 모델을 구현한 프로젝트입니다. 단순히 이론적인 알고리즘 학습에 그치지 않고, 대용량의 서열 데이터를 효율적으로 처리할 수 있도록 최적화된 데이터 구조를 설계하고 비주얼 스튜디오(Visual Studio) 환경에서 직접 소스 코드로 구현했습니다. 서열 간의 겹치는 부분(Overlap)을 찾아내고 오일러 경로(Eulerian Path)를 탐색하여 원본 DNA를 재구성하는 복잡한 연산을 성공적으로 수행해 냈으며, 알고리즘 설계 능력과 논리적 문제 해결력을 증명하는 결과물입니다.', 'VS 소스코드 다운로드', 'Files/DNA.zip', '최종 보고서 다운로드', 'Files/DNA_report.pdf')">
+                <h3>DNA Reconstruction Algorithm</h3>
+                <img src="media/Projects/DNA.PNG" alt="DNA">
+                <p>De Brujin Graph를 활용한 DNA 원본 서열 재구성 알고리즘</p>
+            </article>
+        </div>
+    </section>
+
+    <div id="projectModal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle" class="neon-text">프로젝트 제목</h2>
+            <img id="modalImg" src="" alt="Project Image" class="modal-image">
+            <p id="modalDesc" style="text-align: justify; word-break: keep-all;"></p>
+            <div class="modal-links"></div> 
+        </div>
+    </div>
+    
+    <!-- Section 4: Hobbies (동적 필터링 적용) -->
+    <section id="hobbies">
+        <h2 class="neon-text">Hobbies & Interests</h2>
+        <p>관심 있는 카테고리를 선택하여 상세 내용을 확인하세요.</p>
+        
+        <div id="category-main" class="card-container">
+            <article class="category-card" onclick="showSub('game-list')">
+                <img src="media/Hobbies/Games/Games.png" alt="게임">
+                <h3>GAME</h3>
+                <p>즐겨하는 게임</p>
+            </article>
+            <article class="category-card" onclick="showSub('food-list')">
+                <img src="media/Hobbies/Foods/Foods.PNG" alt="맛집">
+                <h3>FOOD</h3>
+                <p>맛집 리스트</p>
+            </article>
+            <article class="category-card" onclick="showSub('youtube-list')">
+                <img src="media/Hobbies/Youtubes/Youtubes.PNG" alt="유튜브">
+                <h3>YOUTUBE</h3>
+                <p>즐겨보는 유튜브 채널</p>
+            </article>
+        </div>
+
+        <button id="backBtn" class="hidden" onclick="showMain()">← 카테고리로 돌아가기</button>
+
+        <div id="game-list" class="sub-container hidden">
+            <!-- 외부 링크 연결 및 target="_blank"로 새창 열기 -->
+            <article class="item-card"><img src="media/Hobbies/Games/LostArk.PNG" alt="로스트아크"><h3>로스트아크</h3><a href="https://lostark.game.onstove.com/" target="_blank">공식 홈페이지</a></article>
+            <article class="item-card"><img src="media/Hobbies/Games/MapleStory.PNG" alt="메이플스토리"><h3>메이플스토리</h3><a href="https://maplestory.nexon.com/" target="_blank">공식 홈페이지</a></article>
+            <article class="item-card"><img src="media/Hobbies/Games/LoL.PNG" alt="롤"><h3>리그 오브 레전드</h3><a href="https://www.leagueoflegends.com/" target="_blank">공식 홈페이지</a></article>
+        </div>
+
+        <div id="food-list" class="sub-container hidden">
+            <article class="item-card"><img src="media/Hobbies/Foods/ChickenSoup.PNG" alt="닭한마리"><h3>공릉동 닭한마리</h3><a href="https://naver.me/Fuz5e6Vh" target="_blank">네이버 지도</a></article>
+            <article class="item-card"><img src="media/Hobbies/Foods/Noodle.PNG" alt="냉면"><h3>더진국 수육국밥 - 냉면</h3><a href="https://naver.me/5JpyKpJG" target="_blank">네이버 지도</a></article>
+            <article class="item-card"><img src="media/Hobbies/Foods/Meat.PNG" alt="고기"><h3>이억만 껍데기</h3><a href="https://naver.me/xBwJAEWv" target="_blank">네이버 지도</a></article>
+            <article class="item-card"><img src="media/Hobbies/Foods/Dhidi.PNG" alt="짜장면"><h3>띠디</h3><a href="https://naver.me/FvEgFljl" target="_blank">네이버 지도</a></article>
+            <article class="item-card"><img src="media/Hobbies/Foods/Pizza.PNG" alt="피자"><h3>포폴로 피자</h3><a href="https://naver.me/FPn5tMwj" target="_blank">네이버 지도</a></article>
+            <article class="item-card"><img src="media/Hobbies/Foods/Chicken.PNG" alt="누룽지통닭"><h3>계림원</h3><a href="https://naver.me/FTXwsEAO" target="_blank">네이버 지도</a></article>
+        </div>
+
+        <div id="youtube-list" class="sub-container hidden">
+            <article class="item-card"><img src="media/Hobbies/YouTubes/MonsterRat.PNG" alt="괴물쥐"><h3>괴물쥐</h3><a href="https://www.youtube.com/@괴물쥐유튜브" target="_blank">채널 이동</a></article>
+            <article class="item-card"><img src="media/Hobbies/YouTubes/Ralo.PNG" alt="랄로"><h3>랄로</h3><a href="https://www.youtube.com/@랄로" target="_blank">채널 이동</a></article>
+            <article class="item-card"><img src="media/Hobbies/YouTubes/8LJayWalking.PNG" alt="팔차선"><h3>팔차선</h3><a href="https://www.youtube.com/@8LJAYWALKING" target="_blank">채널 이동</a></article>
+            <article class="item-card"><img src="media/Hobbies/YouTubes/MCC.PNG" alt="메타코미디"><h3>메타코미디클럽</h3><a href="https://www.youtube.com/@metacomedyclub" target="_blank">채널 이동</a></article>
+            <article class="item-card"><img src="media/Hobbies/YouTubes/HotSauce.PNG" alt="핫소스"><h3>핫소스</h3><a href="https://www.youtube.com/@hotsauceuniverse" target="_blank">채널 이동</a></article>
+            <article class="item-card"><img src="media/Hobbies/YouTubes/Pang.PNG" alt="팡이요"><h3>팡이요</h3><a href="https://www.youtube.com/@bjpange" target="_blank">채널 이동</a></article>
+        </div>
+    </section>
+
+    <!-- Section 5: Contact -->
+    <section id="contact">
+        <h2 class="neon-text">Contact Me</h2>
+        <!-- 폼 태그 및 HTML5 입력 형식 활용 -->
+        <form action="submit_process.jsp" method="post">
+            <label for="userName">Name:</label>
+            <input type="text" id="userName" placeholder="홍길동" required>
+
+            <label for="userEmail">Email:</label>
+            <input type="email" id="userEmail" placeholder="id@domain.com" required>
+            
+            <label for="userTel">Phone:</label>
+            <input type="tel" id="userTel" placeholder="010-1234-5678" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" rows="5" placeholder="문의 사항을 남겨주세요." required></textarea><br>
+            
+            <input type="submit" value="Send Message">
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 박승우. All rights reserved.</p>
+    </footer>
+
+    <!-- 우측 하단 플로팅 버튼 (고정 배치) -->
+    <button id="topBtn" onclick="scrollToTop()">↑ TOP</button>
+
+</body>
+</html>
